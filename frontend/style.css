@@ -1,0 +1,167 @@
+/* Basic Reset and Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #0056b3;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Task Form Styling */
+#add-task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#new-task-title {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#add-task-form button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#add-task-form button:hover {
+    background-color: #218838;
+}
+
+/* Task List Styling */
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #0056b3; /* Pending default */
+}
+
+.task-item.completed {
+    background-color: #e6ffe6;
+    border-left: 5px solid #28a745;
+}
+
+.task-item .task-title {
+    flex-grow: 1;
+    font-size: 1.1em;
+}
+
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.complete-btn, .delete-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.complete-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.completed-badge {
+    padding: 8px 12px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Statistics Styling */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.stat-card {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card h3 {
+    margin-top: 0;
+    font-size: 1em;
+}
+
+.stat-card p {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 5px 0 0 0;
+}
+
+.stat-card.total { background-color: #fff3cd; color: #856404; }
+.stat-card.completed { background-color: #d4edda; color: #155724; }
+.stat-card.pending { background-color: #cce5ff; color: #004085; }
+
+/* frontend/style.css (Add this block) */
+
+/* Date input styling */
+#new-task-due-date {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styling for displayed dates in the task list */
+.task-dates {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
+    color: #6c757d;
+    margin-right: 15px;
+    text-align: right;
+}
+
+.task-dates small {
+    margin-top: 3px;
+}
+
+.task-item {
+    align-items: flex-start;
+}

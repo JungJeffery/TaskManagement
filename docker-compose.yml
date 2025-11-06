@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    # Create a consistent network name for the frontend to use
+    container_name: task_backend
+    # Optional: for development, to restart on code changes
+    # volumes:
+    #   - ./backend:/app
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    # Ensure frontend waits for backend to be ready (good practice)
+    depends_on:
+      - backend
+    container_name: task_frontend

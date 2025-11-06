@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager App</h1>
+
+        <section class="task-form-section">
+            <h2>Add New Task</h2>
+            <form id="add-task-form">
+                <input
+                    type="text"
+                    id="new-task-title"
+                    placeholder="Enter task title..."
+                    required
+                >
+                <input
+                    type="datetime-local"
+                    id="new-task-due-date"
+                    title="Optional Due Date"
+                >
+                <button type="submit">➕ Add Task</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section class="task-list-section">
+            <h2>📋 Current Tasks</h2>
+            <ul id="task-list">
+                <p class="loading-message">Loading tasks...</p>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="stats-section">
+            <h2>📊 Task Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card total">
+                    <h3>Total Tasks</h3>
+                    <p id="stats-total">0</p>
+                </div>
+                <div class="stat-card completed">
+                    <h3>Completed</h3>
+                    <p id="stats-completed">0</p>
+                </div>
+                <div class="stat-card pending">
+                    <h3>Pending</h3>
+                    <p id="stats-pending">0</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
